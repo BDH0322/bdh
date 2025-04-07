@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+"-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+"http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+<tiles-definitions>
+   <definition name="baseLayout" template="/WEB-INF/views/layout.jsp">
+      <put-attribute name="title" value=""/>
+      <put-attribute name="top" value="/WEB-INF/views/top.jsp"/>
+      <put-attribute name="body" value=""/>
+      <put-attribute name="footer" value="/WEB-INF/views/footer.jsp"/>
+   </definition>
+   
+   <!-- 필요한 jsp파일들을 등록 -->
+   <definition name="main" extends="baseLayout">
+      <put-attribute name="title" value="메인화면"/>
+      <put-attribute name="body" value="/WEB-INF/views/main.jsp"/>
+   </definition> 
+   
+      <!-- 회원가입 -->
+   <definition name="minput" extends="baseLayout">
+      <put-attribute name="title" value="회원가입"/>
+      <put-attribute name="body" value="/WEB-INF/views/member/minput.jsp"/>
+   </definition> 
+   
+   <!-- 출력 -->
+   <definition name="mout" extends="baseLayout">
+      <put-attribute name="title" value="출력"/>
+      <put-attribute name="body" value="/WEB-INF/views/member/mout.jsp"/>
+   </definition> 
+   
+   <!-- 로그인 -->
+   <definition name="login" extends="baseLayout">
+      <put-attribute name="title" value="출력"/>
+      <put-attribute name="body" value="/WEB-INF/views/login/login.jsp"/>
+   </definition> 
+   
+    <!-- 도서자료입력 -->
+   <definition name="binput" extends="baseLayout">
+      <put-attribute name="title" value="도서자료입력"/>
+      <put-attribute name="body" value="/WEB-INF/views/book/binput.jsp"/>
+   </definition> 
+   
+    <!-- 도서자료출력 -->
+   <definition name="bout" extends="baseLayout">
+      <put-attribute name="title" value="도서자료출력"/>
+      <put-attribute name="body" value="/WEB-INF/views/book/bout.jsp"/>
+   </definition> 
+   
+   
+ 
+</tiles-definitions>
+
+
+
